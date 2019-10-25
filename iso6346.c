@@ -114,7 +114,7 @@ int main(void) {
 		strncpy(trimmed_buffer, buffer, CONTAINER_NUM_LEN); // padding for '\0'
 		trimmed_buffer[CONTAINER_NUM_LEN] = '\0';           // null-terminate
 
-		fprintf(process(trimmed_buffer) ? stdout : stderr, "%s", trimmed_buffer);
+		fprintf(validate(trimmed_buffer) ? stdout : stderr, "%s", trimmed_buffer);
 	}
 	free(trimmed_buffer);
 	
