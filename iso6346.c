@@ -24,7 +24,7 @@
  */
 int validate(unsigned char *container_number) {
 	
-	assert(container_number != NULL);			// string exists
+	assert(container_number != NULL);	    // string exists
 	assert(container_number[0] != '\0');	// string not empty
 
 	// copy at most CONTAINER_NUM_LEN chars to avoid buffer overflow
