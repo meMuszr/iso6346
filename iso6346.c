@@ -29,7 +29,7 @@ int validate(unsigned char *container_number) {
 
 	// copy at most CONTAINER_NUM_LEN chars to avoid buffer overflow
 	// and null-terminate
-  unsigned char *new_container_num = malloc(sizeof(char) * (CONTAINER_NUM_LEN + 1));
+  	unsigned char *new_container_num = malloc(sizeof(char) * (CONTAINER_NUM_LEN + 1));
 	strncpy(new_container_num, container_number, CONTAINER_NUM_LEN);
 	new_container_num[CONTAINER_NUM_LEN] = '\0';
 
