@@ -24,7 +24,7 @@
  */
 int validate(unsigned char *container_number) {
 	
-	assert(container_number != NULL);	    // string exists
+	assert(container_number != NULL);	// string exists
 	assert(container_number[0] != '\0');	// string not empty
 
 	// copy at most CONTAINER_NUM_LEN chars to avoid buffer overflow
@@ -105,14 +105,14 @@ int validate(unsigned char *container_number) {
 
 int main(void) {
 	
-	unsigned char buffer[BUFFER_SIZE];	// padding for '\0'
+	unsigned char buffer[BUFFER_SIZE];  // padding for '\0'
 	unsigned char *trimmed_buffer = malloc(sizeof(char) * (CONTAINER_NUM_LEN + 1));
 	
 	while (fgets(buffer, BUFFER_SIZE, stdin) != NULL) {
 		
 		/* remove "\n\0" from string read in */	
-		strncpy(trimmed_buffer, buffer, CONTAINER_NUM_LEN); // padding for '\0'
-		trimmed_buffer[CONTAINER_NUM_LEN] = '\0';           // null-terminate
+		strncpy(trimmed_buffer, buffer, CONTAINER_NUM_LEN);  // padding for '\0'
+		trimmed_buffer[CONTAINER_NUM_LEN] = '\0';            // null-terminate
 
 		fprintf(validate(trimmed_buffer) ? stdout : stderr, "%s", trimmed_buffer);
 	}
