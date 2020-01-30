@@ -11,6 +11,7 @@ debug:  folder
 
 test:   folder
 	gcc -g -Wall -o build/test lib/libiso6346.c test/test.c
+	build/test
 
 run: build
 
