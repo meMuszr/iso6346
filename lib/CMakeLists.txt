@@ -1,5 +1,0 @@
-file(GLOB SOURCES "*.c")
-file(GLOB INCLUDES "../include/*.h")
-add_library(iso6346 SHARED ${SOURCES})
-set_target_properties(iso6346 PROPERTIES PUBLIC_HEADER "${INCLUDES}")
-target_include_directories(iso6346 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

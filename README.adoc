@@ -18,13 +18,11 @@ Reads from `stdin` and outputs to `stdout` if successful; otherwise, `stderr`
 
 == Compiling
 
-    gcc -O3 -Wall iso6346.c -o iso6346
-    gcc -O3 -Wall -lpcre2-8 iso6346_reg.c -o iso6346_reg
+    meson setup build
+    ninja -C build
 
 == TODO
 
-* Fix the warning without sacrificing on type safety
-* Refactor into library (add header)
 * Package for distrubtions (deb / rpm / pkgbuild / brew formulae)
 
 
